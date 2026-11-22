@@ -210,7 +210,7 @@ a training-disjoint benchmark or enterprise false-positive rate. Representative
 human-labelled normal agent workflows remain absent. The optional ensemble
 profile is experimental and is not selected by standalone preparation.
 
-The installable preview work is in progress. No published package, image,
+The installable preview work is in progress. No PyPI release, container image,
 production GPU qualification, air-gapped installer or complete Tidewall platform
 release is implied. OpenAIDR integration and broader guard/dashboard components
 retain their own installation and support boundaries.

@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0a1 — preview candidate, unreleased
+## 0.1.0a1 — alpha preview
 
 - Package the existing Qwen3-0.6B LoRA detector as a standalone authenticated
   HTTP service, independent of OpenAIDR and a database.
@@ -19,5 +19,5 @@ Verification before standalone extraction included a fresh API dependency
 installation, model-extra resolution without installation, controlled error
 responses and two functional requests in the existing model environment.
 These checks do not establish detector quality, a fully fresh model-runtime
-installation or production GPU performance/reliability. No PyPI, container or
-public repository release is implied by this candidate.
+installation or production GPU performance/reliability. No PyPI or container
+release is implied by this candidate.

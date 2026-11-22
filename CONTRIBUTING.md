@@ -41,6 +41,11 @@ a service fix. Never check in credentials, model weights, private transcripts
 or evaluation datasets without explicit rights/privacy review. Remove private
 content and credentials from bug reports. Coordinate sensitive security reports
 privately with the maintainers before sharing reproduction details publicly.
+Use the reporting route in [SECURITY.md](SECURITY.md) for vulnerabilities.
+
+Keep discussion respectful and focused on reproducible technical evidence.
+Critique code and claims rather than people. Maintainers may moderate abuse,
+harassment, unsolicited private information and unsafe public disclosures.
 
 Contributions use Apache-2.0, the repository's existing licence. No copyright
 assignment or separate contributor agreement is introduced by these instructions.

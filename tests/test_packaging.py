@@ -47,6 +47,6 @@ def test_source_distribution_keeps_readme_linked_documentation(tmp_path):
     with tarfile.open(next(output.glob('*.tar.gz'))) as archive:
         names = {str(Path(name).relative_to(Path(name).parts[0])) for name in archive.getnames()}
     assert {'README.md', 'LICENSE', 'NOTICE', 'CONTRIBUTING.md',
-            'CHANGELOG.md', 'docs/model-scope.md'} <= names
+            'CHANGELOG.md', 'SECURITY.md', 'docs/model-scope.md', 'docs/api.md'} <= names
     assert not any(name.startswith('evaluation/') for name in names)
     assert not any(name.endswith(('.safetensors', '.gguf', '.key', '.pem')) for name in names)

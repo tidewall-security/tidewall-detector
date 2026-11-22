@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible service, setup or documentation problem.
+body:
+  - type: markdown
+    attributes:
+      value: For security vulnerabilities, use the private reporting link in SECURITY.md. Do not include service keys, private prompts or customer data.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version, OS, installation method and selected profile/device. Omit credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction and expected/actual behavior
+      description: Use a minimal synthetic example and sanitized errors. Distinguish model results from policy enforcement.
+    validations:
+      required: true

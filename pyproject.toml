@@ -10,7 +10,16 @@ license-files = ["LICENSE", "NOTICE"]
 requires-python = ">=3.11"
 description = "Tenant-bound local serving of Tidewall's existing Qwen/LoRA detector"
 readme = "README.md"
+keywords = ["ai-security", "prompt-injection", "qwen", "lora", "self-hosted"]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3"]
 dependencies = ["fastapi==0.165.0", "uvicorn==0.54.0", "pydantic==2.14.4"]
+
+[project.urls]
+Homepage = "https://tidewall.ai"
+Repository = "https://github.com/tidewall-security/tidewall-detector"
+Documentation = "https://github.com/tidewall-security/tidewall-detector#readme"
+Issues = "https://github.com/tidewall-security/tidewall-detector/issues"
+Changelog = "https://github.com/tidewall-security/tidewall-detector/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 model = ["torch==2.11.0", "transformers==4.51.3", "peft==0.15.2", "accelerate==1.6.0", "numpy==2.4.4"]

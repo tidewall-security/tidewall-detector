@@ -1,5 +1,10 @@
 # Tidewall detector — public preview candidate
 
+[![Tests](https://github.com/tidewall-security/tidewall-detector/actions/workflows/tests.yml/badge.svg)](https://github.com/tidewall-security/tidewall-detector/actions/workflows/tests.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
+**Alpha preview · `v0.1.0a1` · source and wheel installation**
+
 Run Tidewall's existing Qwen3-0.6B model with its trained LoRA adapter as an
 authenticated local HTTP service. OpenAIDR, a database and a dashboard are not
 required. This is a source-installable preview candidate; these instructions do
@@ -12,8 +17,15 @@ components; their capabilities must not be inferred from this endpoint.
 
 ## Install
 
-Use Python 3.11 or newer. From the standalone source checkout or extracted
-source distribution containing this README and `pyproject.toml`:
+Use Python 3.11 or newer. Clone the tagged preview:
+
+```sh
+git clone --branch v0.1.0a1 https://github.com/tidewall-security/tidewall-detector.git
+cd tidewall-detector
+```
+
+From the checkout or extracted source distribution containing this README and
+`pyproject.toml`:
 
 ```sh
 python3 -m venv .venv
@@ -180,12 +192,16 @@ confidence guarantee. No alternative model is silently selected.
   preview does not establish an inference latency or throughput target.
 - No tool-call/output, conversation-sequence or multimodal coverage is claimed.
 
-Errors have `status: error`, a machine-readable `code` and `retryable`; they
+Application-generated errors have `status: error`, a machine-readable `code` and `retryable`; they
 have no manufactured score. Examples: 401 `unauthenticated`, 403
 `tenant_mismatch`, 413 `input_too_large`, 422 `unsupported_input` or
 `invalid_request`, 409 `request_conflict`, 503 `model_unavailable` or
 `capacity_exceeded`, and 504 `deadline_exceeded`. Reusing a request UUID with
 different content is rejected. Use a new UUID for each new assessment.
+HTTP server/intermediary failures can return non-JSON responses, including a
+plain-text 503 when Uvicorn's concurrency limit is exceeded. Treat transport,
+parsing and schema failures as unavailable inference; see the
+[API reference](docs/api.md#errors).
 
 To observe unavailable inference without altering assets, stop the service and
 restart it with the same configuration and `--port 8108`. The original client
@@ -216,6 +232,7 @@ release is implied. OpenAIDR integration and broader guard/dashboard components
 retain their own installation and support boundaries.
 
 See [model scope and provenance](docs/model-scope.md),
+[API reference](docs/api.md), [security reporting](SECURITY.md),
 [contribution instructions](CONTRIBUTING.md) and the
 [preview changelog](CHANGELOG.md). The standalone extraction preserves the
 existing inference implementation; no model was retrained or replaced.

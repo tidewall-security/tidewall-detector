@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — preview candidate, unreleased
+## 0.1.0a1 — preview candidate, unreleased
 
 - Package the existing Qwen3-0.6B LoRA detector as a standalone authenticated
   HTTP service, independent of OpenAIDR and a database.

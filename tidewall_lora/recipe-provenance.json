@@ -1,0 +1,10 @@
+{
+  "source_file": "prompt-injection-lora/scripts/eval_finetune_local.py",
+  "source_commit": "7665e9f91e059893a09649d95596d9da7a3f2aa1",
+  "source_sha256": "0b549d16fed925d6913728251d125a64e23d1c685ad231d3c28fedd28e73e8a2",
+  "functions": {
+    "load_model": "e3dd9a8b153740578c27cfd2b5069793f7a490d0920e7a04cfee2e8c343a539c",
+    "resolve_class_token_ids": "f60817d0de8231b996c6ae7bc9def1152b7be6bd883fd482a4c95d2d677605f7",
+    "score_prompt": "b66e4b99ff52bea8f53bc5089f5cb2361484509dc3cef010c3c39ce42b46118d"
+  }
+}

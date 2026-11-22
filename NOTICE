@@ -1,0 +1,22 @@
+Tidewall LoRA inference
+Apache License 2.0; see the repository LICENSE.
+recipe.py contains the unchanged SYSTEM_PROMPT, load_model, resolve_class_token_ids
+and score_prompt extracted from Tidewall prompt-injection-lora/scripts/eval_finetune_local.py.
+Original source commit, file SHA-256 and function hashes are recorded in the
+packaged tidewall_lora/recipe-provenance.json. Source repository:
+https://github.com/abedegno/prompt-injection-lora
+The original
+repository and trained model/adapter files are not modified by this package.
+Model/adapter licences are retained in their staged directories and manifest.
+
+ensemble.py adapts the class-token scoring recipe in
+prompt-injection-ensemble/scripts/inference.py by abedegno (Apache-2.0),
+commit b9bc67ae6109a3f7bd1c81f73e218a69acf60f36. The optional Q8 profile
+requires separately staged weights; this package does not redistribute them.
+Source repository: https://github.com/abedegno/prompt-injection-ensemble
+
+This standalone source distribution was extracted from Tidewall's maintained
+OpenAIDR integration candidate. OpenAIDR server, sensors, dashboard, hosted
+Intelligence SDK and Git history are not included. Existing inference runtime
+and manifests are preserved; test paths and project documentation are adapted
+for the standalone repository. See docs/model-scope.md for provenance.

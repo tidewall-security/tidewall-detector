@@ -1,0 +1,65 @@
+{
+  "base": "Qwen/Qwen3-0.6B",
+  "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "adapter": "abedegno/prompt-injection-classifier-qwen3-0p6b",
+  "adapter_revision": "5500c3bef53729ed4661b5cfae1b01adca96ca4c",
+  "tokenizer_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "prompt_sha256": "3a0e693064509eb24773ba53af4831ecb4c6ca8cf741a28d2d10080384df5041",
+  "files": {
+    "base/LICENSE": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "base/README.md": {
+      "bytes": 13965,
+      "sha256": "1ab64a26fcb3b461423b89a433a8c858f1bf8d4086f979cbb3ff878d47cf20e9"
+    },
+    "base/config.json": {
+      "bytes": 726,
+      "sha256": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+    },
+    "base/generation_config.json": {
+      "bytes": 239,
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+    },
+    "base/merges.txt": {
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    "base/model.safetensors": {
+      "bytes": 1503300328,
+      "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+    },
+    "base/tokenizer.json": {
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "base/tokenizer_config.json": {
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    "base/vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "adapter/README.md": {
+      "bytes": 6556,
+      "sha256": "bd849b9a56e3d8f9dc4916b9a1bc26ac6d5ac45e85feb81f39d8618a6c8886dc"
+    },
+    "adapter/adapter_config.json": {
+      "bytes": 847,
+      "sha256": "c695ed47e70be728cf8a39b14611faceff31cb3a1b28fd1b4e92861825b6690e"
+    },
+    "adapter/adapter_model.safetensors": {
+      "bytes": 10143888,
+      "sha256": "6416e47695460e7e849d05e022e30e6098e07566a2e4ddb1ed5ff792569c9ee4"
+    }
+  },
+  "class_token_ids": [
+    38157,
+    18675,
+    19860,
+    6092
+  ],
+  "scoring_implementation": "qwen3_last_token_logits.1"
+}
